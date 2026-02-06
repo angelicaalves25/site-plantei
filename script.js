@@ -4,12 +4,19 @@ function togglePassword() {
     const inputPassword = document.getElementById('password')
     const eyeIcon = document.getElementById('eyeIcon')
 
-    if (inputPassword.type === 'password'){
-        inputPassword.type = 'text'
-        eyeIcon.classList.remove('bi-eye')
-        eyeIcon.classList.add('bi-eye-slash')
-    } else {
-        inputPassword.type = 'password'
-        eyeIcon.classList.remove('bi-eye-slash')
-        eyeIcon.classList.add('bi-eye')
-    }
+    // if (inputPassword.type === 'password'){
+    //     inputPassword.type = 'text'
+    //     eyeIcon.classList.remove('bi-eye')
+    //     eyeIcon.classList.add('bi-eye-slash')
+    // } else {
+    //     inputPassword.type = 'password'
+    //     eyeIcon.classList.remove('bi-eye-slash')
+    //     eyeIcon.classList.add('bi-eye')
+    
+const ehSenha = inputPassword.type === 'password' ;
+
+inputpassword.type = ehSenha ? 'text' : 'password' 
+eyeIcon.classList.remove(ehSenha ? 'bi bi-eye' : 'bi bi-eye-slash') 
+eyeIcon.classList.add(ehSenha ? 'bi bi-eye-slash' : 'bi bi-eye')
+
+}
